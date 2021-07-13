@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+  main {
+    width: 50rem;
+    margin: 0 auto;
+    .app {
+      display: flex;
+      margin-left: -2rem;
+      margin-right: -2rem;
+      flex-wrap: wrap;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+      &__left {
+        flex: 0 0 50%;
+        padding-right: 3rem;
+        .form-group {
+          &__tax-percent {
+            &--btn-group {
+              flex: 0 0 33.33%;
+            }
+          }
+        }
+      }
+      &__right {
+        flex: 0 0 50%;
+        padding-left: 3rem;
+        margin: 0;
+      }
+    }
+  }
+}

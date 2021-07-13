@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: #c5e4e7;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 0 0;
+}
+
+main .row {
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main .row__centered {
+  align-items: center;
+  justify-content: center;
+}
+
+main .logo {
+  margin-bottom: 2.2rem;
+}
+
+main .app {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  -webkit-border-radius: 2rem 2rem 0 0;
+  -moz-border-radius: 2rem 2rem 0 0;
+  -ms-border-radius: 2rem 2rem 0 0;
+  -o-border-radius: 2rem 2rem 0 0;
+}
+
+main .app__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+}
+
+main .app__left .form-group {
+  position: relative;
+}
+
+main .app__left .form-group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+main .app__left .form-group label, main .app__left .form-group .form-group__tax-percent--btn-group [type="text"], main .app__left .form-group__tax-percent--btn-group .form-group [type="text"] {
+  color: #5e7a7d;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+main .app__left .form-group img {
+  position: absolute;
+  left: 1rem;
+  top: 3.15rem;
+}
+
+main .app__left .form-group [type="text"] {
+  width: 100%;
+  border: 0.15rem solid transparent;
+  height: 1.5rem;
+  text-align: right;
+  padding: 1.5rem 1.2rem;
+  background: #f4fafa;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  font-size: 1.5rem;
+  color: #00494d;
+  font-weight: 700;
+}
+
+main .app__left .form-group [type="text"]:focus, main .app__left .form-group [type="text"]:active {
+  border-color: #26c0ab;
+  outline: 0;
+}
+
+main .app__left .form-group__tax-percent {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.33rem;
+  margin-right: -0.33rem;
+}
+
+main .app__left .form-group__tax-percent > label, main .app__left .form-group__tax-percent--btn-group .form-group__tax-percent > [type="text"] {
+  color: #5e7a7d;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+  flex: 0 0 100%;
+  padding: 0 0.33rem;
+}
+
+main .app__left .form-group__tax-percent--btn-group {
+  padding: 0 0.33rem;
+  flex: 0 0 50%;
+  margin-bottom: 1rem;
+}
+
+main .app__left .form-group__tax-percent--btn-group [type="radio"] {
+  display: none;
+}
+
+main .app__left .form-group__tax-percent--btn-group [type="radio"]:checked + label, main .app__left .form-group__tax-percent--btn-group [type="radio"]:checked + [type="text"] {
+  background: #26c0ab;
+  color: #00494d;
+}
+
+main .app__left .form-group__tax-percent--btn-group label, main .app__left .form-group__tax-percent--btn-group [type="text"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  height: 2.8rem;
+  width: 100%;
+  background: #00494d;
+  color: #f4fafa;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+main .app__left .form-group__tax-percent--btn-group [type="text"] {
+  text-align: right;
+  padding-right: 0.45rem;
+  border: 0.15rem solid transparent;
+  background: #f4fafa;
+  color: #00494d;
+}
+
+main .app__left .form-group__tax-percent--btn-group [type="text"]:focus, main .app__left .form-group__tax-percent--btn-group [type="text"]:active {
+  border-color: #26c0ab;
+  outline: 0;
+}
+
+main .app__right {
+  margin-top: 4rem;
+  background: #00494d;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+main .app__right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+main .app__right form .form-inputs {
+  margin-bottom: 1.5rem;
+}
+
+main .app__right form .form-inputs .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  height: 3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+main .app__right form .form-inputs .form-group label, main .app__right form .form-inputs .form-group .app__left .form-group__tax-percent--btn-group [type="text"], main .app__left .form-group__tax-percent--btn-group .app__right form .form-inputs .form-group [type="text"] {
+  flex: 0 0 50%;
+  width: 50%;
+  position: relative;
+  height: 100%;
+  display: inline-block;
+}
+
+main .app__right form .form-inputs .form-group label span, main .app__right form .form-inputs .form-group .app__left .form-group__tax-percent--btn-group [type="text"] span, main .app__left .form-group__tax-percent--btn-group .app__right form .form-inputs .form-group [type="text"] span {
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+}
+
+main .app__right form .form-inputs .form-group [type="text"]:disabled {
+  flex: 0 0 50%;
+  width: 50%;
+  border: 0;
+  text-align: right;
+  background: transparent;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  font-size: 1.5rem;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+main .app__right form .form-inputs .form-group [type="text"]:disabled:focus, main .app__right form .form-inputs .form-group [type="text"]:disabled:active {
+  outline: 0;
+}
+
+main .app__right form .btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: #26c0ab;
+  color: #00494d;
+  border: 0;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 50rem;
+    margin: 0 auto;
+  }
+  main .app {
+    display: flex;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+  }
+  main .app__left {
+    flex: 0 0 50%;
+    padding-right: 3rem;
+  }
+  main .app__left .form-group__tax-percent--btn-group {
+    flex: 0 0 33.33%;
+  }
+  main .app__right {
+    flex: 0 0 50%;
+    padding-left: 3rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,223 @@
+@import "variable";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: $primary-light-cyan;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 0 0;
+  .row {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    &__centered {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .logo {
+    margin-bottom: 2.2rem;
+  }
+
+  .app {
+    background-color: $white;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    -webkit-border-radius: 2rem 2rem 0 0;
+    -moz-border-radius: 2rem 2rem 0 0;
+    -ms-border-radius: 2rem 2rem 0 0;
+    -o-border-radius: 2rem 2rem 0 0;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: transparent;
+      .form-group {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+        label {
+          color: $primary-dark-cyan;
+          font-weight: 700;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+        img {
+          position: absolute;
+          left: 1rem;
+          top: 3.15rem;
+        }
+        [type="text"] {
+          width: 100%;
+          border: 0.15rem solid transparent;
+          height: 1.5rem;
+          text-align: right;
+          padding: 1.5rem 1.2rem;
+          background: $secondary-light-cyan;
+          border-radius: 0.3rem;
+          -webkit-border-radius: 0.3rem;
+          -moz-border-radius: 0.3rem;
+          -ms-border-radius: 0.3rem;
+          -o-border-radius: 0.3rem;
+          font-size: 1.5rem;
+          color: $primary-very-dark-cyan;
+          font-weight: 700;
+          &:focus,
+          &:active {
+            border-color: $primary-cyan;
+            outline: 0;
+          }
+        }
+        &__tax-percent {
+          margin-bottom: 1.5rem;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -0.33rem;
+          margin-right: -0.33rem;
+          > label {
+            color: $primary-dark-cyan;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            flex: 0 0 100%;
+            padding: 0 0.33rem;
+          }
+          &--btn-group {
+            padding: 0 0.33rem;
+            flex: 0 0 50%;
+            margin-bottom: 1rem;
+            [type="radio"] {
+              display: none;
+              &:checked + label {
+                background: $primary-cyan;
+                color: $primary-very-dark-cyan;
+              }
+            }
+            label {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.3rem;
+              height: 2.8rem;
+              width: 100%;
+              background: $primary-very-dark-cyan;
+              color: $secondary-light-cyan;
+              font-weight: 700;
+              border-radius: 0.3rem;
+              -webkit-border-radius: 0.3rem;
+              -moz-border-radius: 0.3rem;
+              -ms-border-radius: 0.3rem;
+              -o-border-radius: 0.3rem;
+            }
+            [type="text"] {
+              @extend label;
+              text-align: right;
+              padding-right: 0.45rem;
+              border: 0.15rem solid transparent;
+              background: $secondary-light-cyan;
+              color: $primary-very-dark-cyan;
+              &:focus,
+              &:active {
+                border-color: $primary-cyan;
+                outline: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      margin-top: 4rem;
+      background: $primary-very-dark-cyan;
+      color: $white;
+      padding: 3rem 2rem;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .form-inputs {
+          margin-bottom: 1.5rem;
+          .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            overflow: hidden;
+            height: 3rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            label {
+              flex: 0 0 50%;
+              width: 50%;
+              position: relative;
+              height: 100%;
+              display: inline-block;
+              span {
+                position: absolute;
+                left: 0;
+                bottom: 0rem;
+              }
+            }
+            [type="text"]:disabled {
+              flex: 0 0 50%;
+              width: 50%;
+              border: 0;
+              text-align: right;
+              background: transparent;
+              border-radius: 0.3rem;
+              -webkit-border-radius: 0.3rem;
+              -moz-border-radius: 0.3rem;
+              -ms-border-radius: 0.3rem;
+              -o-border-radius: 0.3rem;
+              font-size: 1.5rem;
+              color: $primary-cyan;
+              font-weight: 700;
+              &:focus,
+              &:active {
+                outline: 0;
+              }
+            }
+          }
+        }
+        .btn {
+          display: block;
+          width: 100%;
+          padding: 0.5rem 0;
+          font-weight: 700;
+          font-size: 1rem;
+          text-transform: uppercase;
+          background: $primary-cyan;
+          color: $primary-very-dark-cyan;
+          border: 0;
+          border-radius: 0.3rem;
+          -webkit-border-radius: 0.3rem;
+          -moz-border-radius: 0.3rem;
+          -ms-border-radius: 0.3rem;
+          -o-border-radius: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+@import "responsive";

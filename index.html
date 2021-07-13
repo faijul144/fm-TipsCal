@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./asset/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./asset/style/style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="row row__centered">
+      <div class="logo"><img src="./asset/images/logo.svg" alt="Logo"></div>
+      <div class="app">
+        <div class="app__left">
+          <form>
+            <div class="form-group">
+              <label for="bill">Bill</label>
+              <input type="text" id="bill">
+              <img src="./asset/images/icon-dollar.svg" alt="Dollar">
+            </div>
+            <div class="form-group__tax-percent">
+              <label>Select Tip %</label>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="radio" name="tax" value="5" id="tax-1">
+                <label for="tax-1">5%</label>
+              </div>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="radio" name="tax" value="10" id="tax-2">
+                <label for="tax-2">10%</label>
+              </div>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="radio" name="tax" value="15" id="tax-3">
+                <label for="tax-3">15%</label>
+              </div>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="radio" name="tax" value="25" id="tax-4">
+                <label for="tax-4">25%</label>
+              </div>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="radio" name="tax" value="50" id="tax-5">
+                <label for="tax-5">50%</label>
+              </div>
+              <div class="form-group__tax-percent--btn-group">
+                <input type="text" placeholder="Custom">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="people">Number of People</label>
+              <input type="text" id="people" value="0">
+              <img src="./asset/images/icon-person.svg" alt="Person">
+            </div>
+          </form>
+        </div>
+        <div class="app__right">
+          <form>
+            <div class="form-inputs">
+              <div class="form-group">
+                <label for="tip">Tip Amount
+                  <span>/ person</span></label>
+                <input type="text" id="tip" value="$0.00" disabled>
+              </div>
+              <div class="form-group">
+                <label for="total">Total
+                  <span>/ person</span></label>
+                <input type="text" id="total" value="$0.00" disabled>
+              </div>
+            </div>
+            <button type="submit" id="reset" class="btn">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Md. Faijul Islam</a>.
+  </div> -->
+
+  <script src="./asset/script/app.js"></script>
+</body>
+
+</html>

@@ -208,6 +208,13 @@ const numberOfPeople = (e) => {
       tip.value = "$0.00";
       total.value = "$0.00";
     }
+  } else {
+    e.target.classList.add("error");
+    document
+      .querySelector(`[for = ${e.target.getAttribute("id")}] span`)
+      .classList.add("show");
+    tip.value = "$0.00";
+    total.value = "$0.00";
   }
   resetDisable();
 };

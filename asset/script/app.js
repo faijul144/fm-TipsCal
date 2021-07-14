@@ -172,9 +172,9 @@ const billAdd = (e) => {
 
 const numberOfPeople = (e) => {
   reset.removeAttribute("disabled");
-  if (bill.value != 0 && e.target.value != 0) {
-    e.target.value = numberValidation(e.target.value);
-    if (e.target.value != 0 || e.target.value != "") {
+  if (e.target.value != "") {
+    e.target.value = parseInt(numberValidation(e.target.value));
+    if (e.target.value != 0) {
       let chosen;
       if (
         (getCusInput() != "" ||
@@ -205,8 +205,8 @@ const numberOfPeople = (e) => {
       document
         .querySelector(`[for = ${e.target.getAttribute("id")}] span`)
         .classList.add("show");
-      let result = bill.value / 1;
-      total.value = result.toFixed(2);
+      tip.value = "$0.00";
+      total.value = "$0.00";
     }
   }
   resetDisable();

@@ -55,6 +55,22 @@ main {
           font-weight: 700;
           display: block;
           margin-bottom: 0.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: #eb5656;
+            opacity: 0;
+            font-size: 0.8rem;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            &.show {
+              opacity: 1;
+            }
+          }
         }
         img {
           position: absolute;
@@ -66,7 +82,7 @@ main {
           border: 0.15rem solid transparent;
           height: 1.5rem;
           text-align: right;
-          padding: 1.5rem 1.2rem;
+          padding: 1.5rem 1rem 1.5rem 2.5rem;
           background: $secondary-light-cyan;
           border-radius: 0.3rem;
           -webkit-border-radius: 0.3rem;
@@ -76,10 +92,26 @@ main {
           font-size: 1.5rem;
           color: $primary-very-dark-cyan;
           font-weight: 700;
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
           &:focus,
           &:active {
             border-color: $primary-cyan;
             outline: 0;
+          }
+          &::placeholder {
+            color: $secondary-dark-cyan;
+          }
+          &.error {
+            border-color: #eb5656;
+            &:focus,
+            &active {
+              border-color: #eb5656;
+            }
           }
         }
         &__tax-percent {
@@ -100,6 +132,7 @@ main {
             padding: 0 0.33rem;
             flex: 0 0 50%;
             margin-bottom: 1rem;
+
             [type="radio"] {
               display: none;
               &:checked + label {
@@ -122,6 +155,11 @@ main {
               -moz-border-radius: 0.3rem;
               -ms-border-radius: 0.3rem;
               -o-border-radius: 0.3rem;
+              transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -ms-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
             }
             [type="text"] {
               @extend label;
@@ -130,6 +168,11 @@ main {
               border: 0.15rem solid transparent;
               background: $secondary-light-cyan;
               color: $primary-very-dark-cyan;
+              transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -ms-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
               &:focus,
               &:active {
                 border-color: $primary-cyan;
@@ -192,6 +235,11 @@ main {
               font-size: 1.5rem;
               color: $primary-cyan;
               font-weight: 700;
+              transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -ms-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
               &:focus,
               &:active {
                 outline: 0;
@@ -200,6 +248,7 @@ main {
           }
         }
         .btn {
+          cursor: pointer;
           display: block;
           width: 100%;
           padding: 0.5rem 0;
@@ -214,6 +263,19 @@ main {
           -moz-border-radius: 0.3rem;
           -ms-border-radius: 0.3rem;
           -o-border-radius: 0.3rem;
+          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          &:hover,
+          &:focus {
+            background: $primary-light-cyan;
+          }
+          &:disabled {
+            background: $primary-dark-cyan;
+            pointer-events: none;
+          }
         }
       }
     }

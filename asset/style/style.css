@@ -65,6 +65,24 @@ main .app__left .form-group label, main .app__left .form-group .form-group__tax-
   font-weight: 700;
   display: block;
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .app__left .form-group label span, main .app__left .form-group .form-group__tax-percent--btn-group [type="text"] span, main .app__left .form-group__tax-percent--btn-group .form-group [type="text"] span {
+  color: #eb5656;
+  opacity: 0;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+main .app__left .form-group label span.show, main .app__left .form-group .form-group__tax-percent--btn-group [type="text"] span.show, main .app__left .form-group__tax-percent--btn-group .form-group [type="text"] span.show {
+  opacity: 1;
 }
 
 main .app__left .form-group img {
@@ -78,7 +96,7 @@ main .app__left .form-group [type="text"] {
   border: 0.15rem solid transparent;
   height: 1.5rem;
   text-align: right;
-  padding: 1.5rem 1.2rem;
+  padding: 1.5rem 1rem 1.5rem 2.5rem;
   background: #f4fafa;
   border-radius: 0.3rem;
   -webkit-border-radius: 0.3rem;
@@ -88,11 +106,29 @@ main .app__left .form-group [type="text"] {
   font-size: 1.5rem;
   color: #00494d;
   font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 main .app__left .form-group [type="text"]:focus, main .app__left .form-group [type="text"]:active {
   border-color: #26c0ab;
   outline: 0;
+}
+
+main .app__left .form-group [type="text"]::placeholder {
+  color: #7f9c9f;
+}
+
+main .app__left .form-group [type="text"].error {
+  border-color: #eb5656;
+}
+
+main .app__left .form-group [type="text"].error:focus, main .app__left .form-group [type="text"].erroractive {
+  border-color: #eb5656;
 }
 
 main .app__left .form-group__tax-percent {
@@ -142,6 +178,11 @@ main .app__left .form-group__tax-percent--btn-group label, main .app__left .form
   -moz-border-radius: 0.3rem;
   -ms-border-radius: 0.3rem;
   -o-border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 main .app__left .form-group__tax-percent--btn-group [type="text"] {
@@ -150,6 +191,11 @@ main .app__left .form-group__tax-percent--btn-group [type="text"] {
   border: 0.15rem solid transparent;
   background: #f4fafa;
   color: #00494d;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 main .app__left .form-group__tax-percent--btn-group [type="text"]:focus, main .app__left .form-group__tax-percent--btn-group [type="text"]:active {
@@ -218,6 +264,11 @@ main .app__right form .form-inputs .form-group [type="text"]:disabled {
   font-size: 1.5rem;
   color: #26c0ab;
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 main .app__right form .form-inputs .form-group [type="text"]:disabled:focus, main .app__right form .form-inputs .form-group [type="text"]:disabled:active {
@@ -225,6 +276,7 @@ main .app__right form .form-inputs .form-group [type="text"]:disabled:focus, mai
 }
 
 main .app__right form .btn {
+  cursor: pointer;
   display: block;
   width: 100%;
   padding: 0.5rem 0;
@@ -239,6 +291,20 @@ main .app__right form .btn {
   -moz-border-radius: 0.3rem;
   -ms-border-radius: 0.3rem;
   -o-border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+main .app__right form .btn:hover, main .app__right form .btn:focus {
+  background: #c5e4e7;
+}
+
+main .app__right form .btn:disabled {
+  background: #5e7a7d;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
